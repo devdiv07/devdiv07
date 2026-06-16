@@ -1,5 +1,8 @@
 # 💫 About Me:
-Final year CSE (AI) student who builds systems that think. Independently shipped MIRROR, a <br>market intelligence pipeline reconciling insider SEC filings, media sentiment and options flow <br>into a single risk score — plus a 9-workflow AI agent CRM and a Web3 compliance backend. <br>Experienced in Python, data pipelines, NLP, LLMs, and agentic AI. Bias toward building <br>things that generate real insight from complex, unstructured data.
+Final year CSE (AI) student who builds systems that think.
+Independently shipped MIRROR, a market intelligence pipeline reconciling insider SEC- filings, media sentiment and options flow into a single risk score — plus a 9-workflow AI agent CRM and a Web3 compliance backend.
+
+<br>Experienced in Python, data pipelines, NLP, LLMs, and agentic AI. Bias toward building things that generate real insight from complex, unstructured data.
 
 
 ## 🌐 Socials:
