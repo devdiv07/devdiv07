@@ -1,6 +1,5 @@
 # 💫 About Me:
 Final year CSE (AI) student who builds systems that think.
-
 <br>Experienced in Python, data pipelines, NLP, LLMs, and agentic AI. Bias toward building things that generate real insight from complex, unstructured data.
 
 
