@@ -1,68 +1,83 @@
 # Divyansh Shukla
 
-I build AI systems where the interesting part is the boundary — what the model is
-allowed to decide, and what has to be deterministic, durable, and provable.
+Final-year CSE (AI) student working on **reliability, open-source verification,
+and hardware-attestation testing**.
+
+I like engineering questions where a green test suite is not enough:
+what evidence supports the claim, what would falsify it, and does the
+implementation still hold when the input comes from somewhere independent?
 
 ---
 
-## Selected work
+## AgenTrust work
+
+### Hardware-attestation verification
+
+Recent work across the AgenTrust repositories has focused on verifier
+correctness and evidence provenance.
+
+- Reproduced a historical Intel TDX DCAP-v4 parser/fixture defect and isolated
+  the difference to the six-byte `QE_REPORT_CERTIFICATION_DATA` wrapper.
+- Compiled Intel's upstream QVL quote generator and used independently originated
+  evidence to reproduce the structural distinction without physical TDX hardware.
+- Generated TPM quote vectors with the Microsoft/TCG TPM 2.0 reference simulator
+  and measured a signature/hash-agility false reject in a pinned Agent Manifest
+  revision.
+
+### Contributions
+
+**[cMCP #528](https://github.com/agentrust-io/cmcp/pull/528)**  
+Delegate duplicate Intel TDX signature-section parsing to Agent Manifest's
+canonical parser, with regressions for overstated declared lengths.
+
+**[cA2A #120](https://github.com/agentrust-io/ca2a/pull/120)**  
+Remove redundant delegation-chain verification while preserving trusted-root,
+holder-proof, and authorization ordering.
+
+**[Agent Manifest #323](https://github.com/agentrust-io/agent-manifest/pull/323)**  
+Simulator-driven reproduction, verifier fix, and reference-simulator regression
+vectors for TPM signature/hash agility. Maintainer PR #320 subsequently landed
+the canonical implementation.
+
+---
+
+## Selected engineering work
 
 ### [Financial Operation Core](https://github.com/devdiv07/financial-operation-core)
 
-Durable execution for agent-initiated financial operations across retries, crashes,
-and uncertain provider outcomes.
+Durable execution for agent-initiated financial operations across retries,
+crashes, concurrency, and uncertain provider outcomes.
 
-- Measured Razorpay Refund idempotency and recovery behaviour in **Test Mode**:
-  after a lost response, retrying with the same key returned the original refund —
-  while two different keys produced two refunds.
-- Keeps four identities distinct — business operation, execution attempt, MCP request,
-  and provider retry identity — because collapsing them is what silently duplicates
-  money movement.
-- Every public claim maps to an artifact in `EVIDENCE.md`, including a pilot that was
-  **invalidated** and an interpretation that was **corrected** rather than quietly
-  rewritten.
+- Separates logical operation identity from execution attempts and provider retry
+  identity so retry safety is explicit rather than assumed.
+- Measured Razorpay Test Mode behavior and backed the failure model with crash,
+  concurrency, authorization-replay, and mutation tests.
+- Public claims map to reproducible evidence rather than inferred API behavior.
 
 ### [Multimodal Message Router](https://github.com/devdiv07/multimodal-message-router)
 
-Decides whether a message should interrupt you now, wait for a digest, or be
-suppressed — reading attached images and voice notes, not just text.
-
-- Four perception layers (Whisper ASR, RapidOCR, BLIP captioning, video keyframes),
-  each pinned and run deterministically behind a strict validation boundary.
-- A 4-mode ablation harness measures whether those layers actually helped, under
-  leakage-controlled evaluation — 0.966 action macro-F1.
+A notify / digest / mute decision system with leakage-controlled evaluation,
+explicit policy precedence, and 277 automated tests.
 
 ---
 
-## Open source
+## Other open source
 
-**[razorpay/razorpay-mcp-server#114](https://github.com/razorpay/razorpay-mcp-server/pull/114)** — open PR
-
-Adds optional refund idempotency-key support to the `create_refund` MCP tool and
-forwards the documented `X-Refund-Idempotency` header. The Go SDK already accepted
-extra request headers; the tool passed `nil` and exposed no way to set one.
-
----
-
-## Also here
-
-- **[ClaimTrace](https://github.com/devdiv07/ClaimTrace)** — schema-safe multimodal
-  claim verification: a vision model returns Pydantic-validated structured output,
-  wrapped in deterministic rule checks and enforced schema validation.
-- **[MIRROR](https://github.com/devdiv07/MIRROR)** — research-grade insider-conviction
-  signal from SEC Form 4 filings. Explicitly not yet validated.
+**[Razorpay MCP #114](https://github.com/razorpay/razorpay-mcp-server/pull/114)**  
+Adds optional refund idempotency-key support to `create_refund` while preserving
+existing behavior when omitted.
 
 ---
 
 ## Working with
 
-Python · PostgreSQL · SQLAlchemy / Alembic · asyncio · Go · MCP and agent tool design ·
-LLM evaluation and ablation · Ed25519 / request signing · Docker · GitHub Actions
+Python · pytest · mutation testing · Git / GitHub · Docker · PostgreSQL ·
+SQLAlchemy · REST APIs · TPM 2.0 / Intel TDX attestation work ·
+LLM/VLM integration and evaluation
 
 ---
 
 [LinkedIn](https://www.linkedin.com/in/divyanshshukla03/) ·
-[X](https://x.com/iam_divyansh7) ·
 [Portfolio](https://divyansh-shukla-portfolio.vercel.app/) ·
 [Email](mailto:divyanshshukla7597@gmail.com)
 
