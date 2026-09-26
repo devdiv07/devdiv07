@@ -69,7 +69,7 @@ existing behavior when omitted.
 
 ---
 
-## Working with
+## Working 
 
 Python · pytest · mutation testing · Git / GitHub · Docker · PostgreSQL ·
 SQLAlchemy · REST APIs · TPM 2.0 / Intel TDX attestation work ·
