@@ -65,7 +65,7 @@ A Razorpay AI Buildathon project: a gate that checks a payment-recovery agent's 
 
 <sub>Also: <a href="https://github.com/devdiv07/ClaimTrace">ClaimTrace</a>, a schema-validated VLM claim-verification pipeline.</sub>
 
-## Toolkit
+ Toolkit
 
 | | Used in the work above |
 |---|---|
