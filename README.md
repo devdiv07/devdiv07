@@ -78,4 +78,4 @@ A Razorpay AI Buildathon project: a gate that checks a payment-recovery agent's 
 
 - **Attestation evidence:** where conformance evidence for Intel TDX and TPM 2.0 verifiers comes from.
 - **[Screenshot provenance](https://github.com/devdiv07/when-is-a-screenshot-evidence):** a measurement study of when a computer-use agent's screenshot proves what an evaluator thinks it does.
-- **[MIRROR](https://github.com/devdiv07/MIRROR):** a watchlist research assistant. Its data layer is built and tested offline. The product itself is still planned.
+- **[MIRROR](https://github.com/devdiv07/MIRROR):** a watchlist research assistant. Its data layer is built and tested offline. The product itself is still planned
