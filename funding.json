@@ -34,5 +34,28 @@
         ]
       }
     ]
-  }
+  },
+  "projects": [
+    {
+      "guid": "when-is-a-screenshot-evidence",
+      "name": "When Is a Screenshot Evidence?",
+      "description": "Existing public Apache-2.0 research on the limits of screenshot provenance and source attribution in computer-using AI agents. This is a public research baseline and a possible location for further reproducible provenance evidence. The requested fellowship supports the individual's related upstream contributions and public research; it does not seek funding on behalf of third-party maintainers or claim that their projects are owned by the applicant.",
+      "webpageUrl": {
+        "url": "https://github.com/devdiv07/when-is-a-screenshot-evidence"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/devdiv07/when-is-a-screenshot-evidence"
+      },
+      "licenses": [
+        "spdx:Apache-2.0"
+      ],
+      "tags": [
+        "ai-agents",
+        "agent-evaluation",
+        "provenance",
+        "reproducibility",
+        "research"
+      ]
+    }
+  ]
 }
