@@ -1,0 +1,38 @@
+{
+  "$schema": "https://fundingjson.org/schema/v1.1.0.json",
+  "version": "v1.1.0",
+  "entity": {
+    "type": "individual",
+    "role": "contributor",
+    "name": "Divyansh Shukla",
+    "email": "divyanshshukla7597@gmail.com",
+    "description": "Indian FOSS contributor based in Jaipur, focused on reproducible correctness and security boundaries in AI-agent tooling and software supply chains. Four merged upstream AgenTrust pull requests: TPM reference-simulator conformance vectors (agentrust-io/agent-manifest#323); TDX signature parsing delegation (agentrust-io/cmcp#528); delegation-chain verification (agentrust-io/ca2a#120); and Shadow AI identity/compatibility corrections (agentrust-io/integrations#221). Public research: github.com/devdiv07/when-is-a-screenshot-evidence, an Apache-2.0 study of visual-evidence provenance and its limits. Reported a reproducible PEP 751 parsing defect in aquasecurity/trivy Discussion #11402, later tracked by a maintainer as issue #11411; did not author the issue or fix. I use AI assistants in portions of research, implementation, and tests and document provenance and independent-verification limitations. GitHub profile provides links and technical evidence. Funding is requested for future public contributions, not to release an unvalidated private product.",
+    "webpageUrl": {
+      "url": "https://github.com/devdiv07",
+      "wellKnown": "https://github.com/devdiv07/devdiv07/blob/main/.well-known/funding-manifest-urls"
+    }
+  },
+  "funding": {
+    "channels": [
+      {
+        "guid": "private-bank-transfer",
+        "type": "bank",
+        "description": "Bank transfer information will be supplied privately after a funding decision. No banking information is published in this manifest."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "foss-contributor-fellowship-3m",
+        "status": "active",
+        "name": "Three-month individual FOSS contributor fellowship",
+        "description": "Three-month individual FOSS contributor fellowship; total INR 90,000 for 3 months (INR 30,000/month for contributor time). Purpose: investigate concrete correctness and evidence-provenance failures in existing open-source agent-security tooling; produce reproducible, scoped upstream tests/fixes where justified. No new standalone product is proposed. Month 1: select a maintainer-relevant issue or well-founded correctness question; publish a bounded audit, baseline test/reproducer or documented negative result, and scope/limitations. Month 2: coordinate with maintainers; if a concrete defect is confirmed, submit a focused regression test and proposed fix or review; otherwise publish the tested outcome without inventing an issue. Month 3: verify outcomes independently where practical, publish reproducibility materials and technical notes, and share one community update or talk. Milestones measure public work and submissions, not guaranteed maintainer merges. All code and evidence intended for public release will follow upstream licenses and AI-use policies. AI assistance, authorship limits and verification steps will be documented. Detailed proposal: https://github.com/devdiv07/devdiv07/blob/main/FELLOWSHIP_PROPOSAL.md",
+        "amount": 90000,
+        "currency": "INR",
+        "frequency": "one-time",
+        "channels": [
+          "private-bank-transfer"
+        ]
+      }
+    ]
+  }
+}
